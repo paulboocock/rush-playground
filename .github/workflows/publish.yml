@@ -38,7 +38,9 @@ jobs:
         run: node common/scripts/install-run-rush.js test --verbose
 
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main
+        run: 
+          - npm config set access public 
+          - node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main
 
       - name: Create release
         id: create_release
