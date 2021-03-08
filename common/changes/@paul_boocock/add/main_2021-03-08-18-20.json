@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@paul_boocock/add",
+      "comment": "Add Strings",
+      "type": "none"
+    }
+  ],
+  "packageName": "@paul_boocock/add",
+  "email": "paul@snowplowanalytics.com"
+}
