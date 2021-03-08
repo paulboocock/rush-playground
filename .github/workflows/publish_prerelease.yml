@@ -1,0 +1,53 @@
+name: Deploy Tracker
+
+on:
+  push:
+    tags: [1-9]+.[0-9]+.[0-9]+-.+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+
+    env:
+      NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: pnpm cache
+        uses: actions/cache@v2
+        with:
+          path: ./common/temp/pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('common/config/rush/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
+      - name: Install
+        run: node common/scripts/install-run-rush.js install
+
+      - name: Build
+        run: node common/scripts/install-run-rush.js rebuild --verbose
+
+      - name: Get tag and tracker version information
+        id: version
+        run: |
+          echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*-*}
+
+      - name: Publish
+        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --partial-prerelease --tag next
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: v${{ github.ref }}
+          draft: false
+          prerelease: true
