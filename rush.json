@@ -446,11 +446,16 @@
     //   // "versionPolicyName": ""
     // },
     // 
-    // {
-    //   "packageName": "my-controls",
-    //   "projectFolder": "libraries/my-controls",
-    //   "reviewCategory": "production"
-    // },
+    {
+      "packageName": "@paulboocock/add",
+      "projectFolder": "libraries/add",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@paulboocock/subtract",
+      "projectFolder": "libraries/subtract",
+      "reviewCategory": "production"
+    }
     // 
     // {
     //   "packageName": "my-toolchain",

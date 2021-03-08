@@ -1,0 +1,15 @@
+{
+  "name": "@paulboocock/add",
+  "version": "1.0.0",
+  "description": "Add numbers - Part of a Rush Monorepo demonstration",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": ""
+  },
+  "author": "Paul Boocock",
+  "license": "MIT"
+}

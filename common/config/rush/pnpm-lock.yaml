@@ -1,0 +1,22 @@
+dependencies:
+  '@rush-temp/add': file:projects/add.tgz
+  '@rush-temp/subtract': file:projects/subtract.tgz
+lockfileVersion: 5.2
+packages:
+  file:projects/add.tgz:
+    dev: false
+    name: '@rush-temp/add'
+    resolution:
+      integrity: sha512-js60zwLnPpaHSlJSnQS84Po7ZFywmqTJUMfqWxjHLbcykMAtD32V+9J1Gn2f+0I2r9goh/mtxEdIo4sQvaQY2w==
+      tarball: file:projects/add.tgz
+    version: 0.0.0
+  file:projects/subtract.tgz:
+    dev: false
+    name: '@rush-temp/subtract'
+    resolution:
+      integrity: sha512-x/tqOjNzxIlxMavDC6M3EvBnNVMWebhyuUltVdwJmF2ql3j240C9eKZOo+kYqdCykjwFh4LohJOSgF9xA1M7aA==
+      tarball: file:projects/subtract.tgz
+    version: 0.0.0
+specifiers:
+  '@rush-temp/add': file:./projects/add.tgz
+  '@rush-temp/subtract': file:./projects/subtract.tgz
