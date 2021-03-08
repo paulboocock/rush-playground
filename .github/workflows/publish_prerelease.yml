@@ -40,7 +40,7 @@ jobs:
           echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*-*}
 
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --tag next
+        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --tag next  --set-access-level public
 
       - name: Create release
         id: create_release

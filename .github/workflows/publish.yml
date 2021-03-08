@@ -2,8 +2,8 @@ name: Deploy Tracker
 
 on:
   push:
-    branches:
-      - main
+    tags: 
+      - '[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   deploy:
@@ -34,8 +34,11 @@ jobs:
       - name: Build
         run: node common/scripts/install-run-rush.js rebuild --verbose
 
+      - name: version
+        run: node common/scripts/install-run-rush.js version --bump --target-branch main
+
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main
+        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main --set-access-level public
 
       - name: Create release
         id: create_release
