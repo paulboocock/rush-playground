@@ -39,8 +39,16 @@ jobs:
         run: |
           echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*-*}
 
+      - name: Setup git
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Version
+        run: node common/scripts/install-run-rush.js version --bump
+
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --tag next  --set-access-level public
+        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --tag next  --set-access-level public
 
       - name: Create release
         id: create_release
