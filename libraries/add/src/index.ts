@@ -7,3 +7,7 @@ export function add(...numbers: Array<number>) {
 export function add2(a: number, b: number) {
   return a + b;
 }
+
+export function addStrings(a: string, b: string) {
+  return a + b;
+}
