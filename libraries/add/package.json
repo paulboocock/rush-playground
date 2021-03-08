@@ -1,6 +1,6 @@
 {
   "name": "@paulboocock/add",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Add numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/index.js",
   "files": [
