@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "Add second function definition",
+      "type": "none",
+      "packageName": "@paulboocock/add"
+    }
+  ],
+  "packageName": "@paulboocock/add",
+  "email": "paul@snowplowanalytics.com"
+}
