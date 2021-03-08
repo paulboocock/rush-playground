@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "Initial Version 1.0.0 package",
+      "type": "none",
+      "packageName": "@paulboocock/add"
+    }
+  ],
+  "packageName": "@paulboocock/add",
+  "email": "paul@snowplowanalytics.com"
+}
