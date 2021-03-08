@@ -4,7 +4,7 @@
     "outDir": "dist",
 
     "module": "ES6",
-    "target": "ES5",
+    "target": "ES6",
     "moduleResolution": "node",
     /* Basic Options */
     "declaration": true /* Generates corresponding '.d.ts' file. */,
