@@ -447,13 +447,13 @@
     // },
     // 
     {
-      "packageName": "@paulboocock/add",
+      "packageName": "@paul_boocock/add",
       "projectFolder": "libraries/add",
       "reviewCategory": "libraries",
       "versionPolicyName": "libraries"
     },
     {
-      "packageName": "@paulboocock/subtract",
+      "packageName": "@paul_boocock/subtract",
       "projectFolder": "libraries/subtract",
       "reviewCategory": "libraries",
       "versionPolicyName": "libraries"

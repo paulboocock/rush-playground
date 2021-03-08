@@ -1,5 +1,5 @@
 {
-  "name": "@paulboocock/subtract",
+  "name": "@paul_boocock/subtract",
   "version": "3.0.0",
   "description": "Subtract numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/index.js",
