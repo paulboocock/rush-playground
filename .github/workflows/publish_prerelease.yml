@@ -34,13 +34,13 @@ jobs:
       - name: Build
         run: node common/scripts/install-run-rush.js rebuild --verbose
 
-      - name: Get tag and tracker version information
+      - name: Get tag version information
         id: version
         run: |
           echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*-*}
 
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --partial-prerelease --tag next
+        run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --prerelease-name ${{ steps.version.outputs.TAG_VERSION }} --tag next
 
       - name: Create release
         id: create_release

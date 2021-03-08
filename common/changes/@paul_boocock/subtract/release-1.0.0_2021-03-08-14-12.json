@@ -2,10 +2,10 @@
   "changes": [
     {
       "comment": "Add second function definition",
-      "type": "none",
-      "packageName": "@paulboocock/add"
+      "type": "patch",
+      "packageName": "@paul_boocock/subtract"
     }
   ],
-  "packageName": "@paulboocock/add",
+  "packageName": "@paulboocock/subtract",
   "email": "paul@snowplowanalytics.com"
 }
