@@ -3,3 +3,7 @@ export function subtract(...numbers: Array<number>) {
     return a - b;
   });
 }
+
+export function subtract2(a: number, b: number) {
+  return a - b;
+}
