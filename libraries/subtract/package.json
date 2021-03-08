@@ -1,6 +1,6 @@
 {
   "name": "@paulboocock/subtract",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Subtract numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/index.js",
   "files": [
