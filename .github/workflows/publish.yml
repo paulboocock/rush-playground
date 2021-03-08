@@ -34,7 +34,12 @@ jobs:
       - name: Build
         run: node common/scripts/install-run-rush.js rebuild --verbose
 
-      - name: version
+      - name: Setup git
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Version
         run: node common/scripts/install-run-rush.js version --bump --target-branch main
 
       - name: Publish
