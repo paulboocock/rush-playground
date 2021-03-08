@@ -1,0 +1,17 @@
+{
+  "name": "@paul_boocock/add",
+  "entries": [
+    {
+      "version": "5.0.0",
+      "tag": "@paul_boocock/add_v5.0.0",
+      "date": "Mon, 08 Mar 2021 17:38:58 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add second function definition"
+          }
+        ]
+      }
+    }
+  ]
+}

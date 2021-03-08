@@ -1,0 +1,22 @@
+{
+  "name": "@paul_boocock/subtract",
+  "entries": [
+    {
+      "version": "5.0.0",
+      "tag": "@paul_boocock/subtract_v5.0.0",
+      "date": "Mon, 08 Mar 2021 17:38:58 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Initial Version 4.0.0 package"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Add second function definition"
+          }
+        ]
+      }
+    }
+  ]
+}
