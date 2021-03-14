@@ -44,11 +44,15 @@ jobs:
 
       - name: Publish
         run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --tag next --set-access-level public
+      
+      - name: Get Version Information
+        id: get_version
+        uses: battila7/get-version-action@v2
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: v${{GITHUB_REF#refs/*/}}
+          name: v${{ steps.get_version.outputs.version }}
           prerelease: true
           files: |
             ./libraries/**/dist/*.js
