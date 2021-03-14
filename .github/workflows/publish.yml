@@ -45,13 +45,12 @@ jobs:
       - name: Publish
         run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main --set-access-level public
 
-      - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: v${GITHUB_REF#refs/*/}
+          prerelease: true
+          files: |
+            ./libraries/**/dist/*.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: v${{ github.ref }}
-          draft: false
-          prerelease: false
