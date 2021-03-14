@@ -2,7 +2,7 @@
   "name": "@paul_boocock/add",
   "version": "5.1.1",
   "description": "Add numbers - Part of a Rush Monorepo demonstration",
-  "main": "dist/index.js",
+  "main": "dist/add.js",
   "files": [
     "dist"
   ],

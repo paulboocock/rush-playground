@@ -37,7 +37,7 @@ jobs:
       - name: Get tag version information
         id: version
         run: |
-          echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*-*}
+          echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/*/}
 
       - name: Setup git
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
@@ -53,6 +53,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          name: v${{steps.version.outputs.TAG_VERSION}}
           prerelease: true
           files: |
             ./libraries/**/dist/*.js

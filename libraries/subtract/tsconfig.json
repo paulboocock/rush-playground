@@ -6,6 +6,8 @@
     "module": "ES6",
     "target": "ES6",
     "moduleResolution": "node",
+
+    "outFile": "subtract.js",
     /* Basic Options */
     "declaration": true /* Generates corresponding '.d.ts' file. */,
     "resolveJsonModule": true,
