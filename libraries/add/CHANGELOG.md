@@ -1,6 +1,11 @@
 # Change Log - @paul_boocock/add
 
-This log was last generated on Sun, 14 Mar 2021 21:37:28 GMT and should not be manually modified.
+This log was last generated on Sun, 14 Mar 2021 22:02:00 GMT and should not be manually modified.
+
+## 5.2.2
+Sun, 14 Mar 2021 22:02:00 GMT
+
+_Version update only_
 
 ## 5.2.1
 Sun, 14 Mar 2021 21:37:28 GMT
