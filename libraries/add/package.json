@@ -3,6 +3,7 @@
   "version": "5.1.1",
   "description": "Add numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/add.js",
+  "types": "dist/add.d.ts",
   "files": [
     "dist"
   ],
