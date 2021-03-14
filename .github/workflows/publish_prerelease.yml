@@ -48,7 +48,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: v${GITHUB_REF#refs/*/}
+          name: v${{GITHUB_REF#refs/*/}}
           prerelease: true
           files: |
             ./libraries/**/dist/*.js
