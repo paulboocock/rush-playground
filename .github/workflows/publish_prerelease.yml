@@ -49,12 +49,15 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
+      - name: Zip release
+        run: zip -r release.zip ./libraries/**/dist/*.js
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           name: v${{ steps.get_version.outputs.version }}
           prerelease: true
-          files: |
-            ./libraries/**/dist/*.js
+
+          files: ./release.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
