@@ -30,3 +30,8 @@ jobs:
 
       - name: Build
         run: node common/scripts/install-run-rush.js rebuild --verbose
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: libraries
+          path: ./libraries/**/dist/*.js
