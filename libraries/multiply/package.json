@@ -1,0 +1,16 @@
+{
+  "name": "@paul_boocock/multiply",
+  "version": "0.4.4",
+  "description": "Multiply numbers - Part of a Rush Monorepo demonstration",
+  "main": "dist/multiply.js",
+  "types": "dist/multiply.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": ""
+  },
+  "author": "Paul Boocock",
+  "license": "MIT"
+}

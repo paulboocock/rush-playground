@@ -457,6 +457,12 @@
       "projectFolder": "libraries/subtract",
       "reviewCategory": "libraries",
       "versionPolicyName": "libraries"
+    },
+    {
+      "packageName": "@paul_boocock/multiply",
+      "projectFolder": "libraries/multiply",
+      "reviewCategory": "libraries",
+      "versionPolicyName": "libraries"
     }
     // 
     // {

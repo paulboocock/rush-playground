@@ -1,5 +1,6 @@
 dependencies:
   '@rush-temp/add': file:projects/add.tgz
+  '@rush-temp/multiply': file:projects/multiply.tgz
   '@rush-temp/subtract': file:projects/subtract.tgz
 lockfileVersion: 5.2
 packages:
@@ -10,6 +11,13 @@ packages:
       integrity: sha512-js60zwLnPpaHSlJSnQS84Po7ZFywmqTJUMfqWxjHLbcykMAtD32V+9J1Gn2f+0I2r9goh/mtxEdIo4sQvaQY2w==
       tarball: file:projects/add.tgz
     version: 0.0.0
+  file:projects/multiply.tgz:
+    dev: false
+    name: '@rush-temp/multiply'
+    resolution:
+      integrity: sha512-xUNvNQDbFeaDFw2HZXQyTCYNA3Vw0K08rNvhkUnyvwEvG1pivv5btII/zXiEiQDWY2GnPv0/DSCltuYz3YvomA==
+      tarball: file:projects/multiply.tgz
+    version: 0.0.0
   file:projects/subtract.tgz:
     dev: false
     name: '@rush-temp/subtract'
@@ -17,6 +25,8 @@ packages:
       integrity: sha512-x/tqOjNzxIlxMavDC6M3EvBnNVMWebhyuUltVdwJmF2ql3j240C9eKZOo+kYqdCykjwFh4LohJOSgF9xA1M7aA==
       tarball: file:projects/subtract.tgz
     version: 0.0.0
+registry: ''
 specifiers:
   '@rush-temp/add': file:./projects/add.tgz
+  '@rush-temp/multiply': file:./projects/multiply.tgz
   '@rush-temp/subtract': file:./projects/subtract.tgz
