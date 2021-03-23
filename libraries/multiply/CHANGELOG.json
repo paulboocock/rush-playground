@@ -1,6 +1,12 @@
 {
-  "name": "@paul_boocock/subtract",
+  "name": "@paul_boocock/multiply",
   "entries": [
+    {
+      "version": "5.2.3",
+      "tag": "@paul_boocock/multiply_v5.2.3",
+      "date": "Tue, 23 Mar 2021 16:17:18 GMT",
+      "comments": {}
+    },
     {
       "version": "5.2.2",
       "tag": "@paul_boocock/subtract_v5.2.2",

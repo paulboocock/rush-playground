@@ -1,6 +1,11 @@
-# Change Log - @paul_boocock/subtract
+# Change Log - @paul_boocock/multiply
 
-This log was last generated on Sun, 14 Mar 2021 22:02:00 GMT and should not be manually modified.
+This log was last generated on Tue, 23 Mar 2021 16:17:18 GMT and should not be manually modified.
+
+## 5.2.3
+Tue, 23 Mar 2021 16:17:18 GMT
+
+_Version update only_
 
 ## 5.2.2
 Sun, 14 Mar 2021 22:02:00 GMT
