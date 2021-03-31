@@ -1,6 +1,6 @@
 {
   "name": "@paul_boocock/multiply",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "description": "Multiply numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/multiply.js",
   "types": "dist/multiply.d.ts",
