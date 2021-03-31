@@ -1,6 +1,11 @@
 # Change Log - @paul_boocock/multiply
 
-This log was last generated on Wed, 31 Mar 2021 11:12:16 GMT and should not be manually modified.
+This log was last generated on Wed, 31 Mar 2021 11:16:16 GMT and should not be manually modified.
+
+## 5.2.5
+Wed, 31 Mar 2021 11:16:16 GMT
+
+_Version update only_
 
 ## 5.2.4
 Wed, 31 Mar 2021 11:12:16 GMT
