@@ -1,6 +1,6 @@
 {
   "name": "@paul_boocock/add",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "description": "Add numbers - Part of a Rush Monorepo demonstration",
   "main": "dist/add.js",
   "types": "dist/add.d.ts",
