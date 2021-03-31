@@ -2,10 +2,10 @@ name: Deploy Tracker
 
 on:
   workflow_dispatch:
-  inputs:
-    version:
-      description: 'The tag and the expected version to be deployed'
-      required: true
+    inputs:
+      version:
+        description: 'The tag and the expected version to be deployed'
+        required: true
 
 jobs:
   deploy:
