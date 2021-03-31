@@ -72,8 +72,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: Version ${{ github.event.inputs.version }}
-          tag_name: ${{ github.event.inputs.version }}
+          name: Version ${{ steps.tag_version.outputs.new_tag }}
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
           files: ./release.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
