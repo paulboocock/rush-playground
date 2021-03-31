@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'The tag and the expected version to be deployed'
+        description: 'The release tag'
         required: true
 
 jobs:
