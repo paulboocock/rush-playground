@@ -46,7 +46,7 @@ jobs:
 
       - name: Get tag and tracker version information
         id: version
-        run: echo "##[set-output name=TRACKER_VERSION;]$(node -p "require('./package.json').version")"
+        run: echo "##[set-output name=TRACKER_VERSION;]$(node -p "require('./libraries/add/package.json').version")"
       
       - name: Fail if version mismatch
         if: ${{ github.event.inputs.version != steps.version.outputs.TRACKER_VERSION }}
