@@ -1,9 +1,11 @@
 name: Deploy Tracker
 
 on:
-  push:
-    tags: 
-      - '[0-9]+.[0-9]+.[0-9]+-*'
+  workflow_dispatch:
+  inputs:
+    version:
+      description: 'The tag and the expected version to be deployed'
+      required: true
 
 jobs:
   deploy:
@@ -42,12 +44,27 @@ jobs:
       - name: Version
         run: node common/scripts/install-run-rush.js version --bump
 
+      - name: Get tag and tracker version information
+        id: version
+        run: echo "##[set-output name=TRACKER_VERSION;]$(node -p "require('./package.json').version")"
+      
+      - name: Fail if version mismatch
+        if: ${{ github.event.inputs.version != steps.version.outputs.TRACKER_VERSION }}
+        run: |
+          echo "Input version (${{ github.event.inputs.version }}) doesn't match version in project (${{ steps.version.outputs.TRACKER_VERSION }})"
+          exit 1
+
       - name: Publish
         run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --tag next --set-access-level public
-      
-      - name: Get Version Information
-        id: get_version
-        uses: battila7/get-version-action@v2
+
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v5.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_prefix: ''
+          default_bump: false
+          custom_tag: ${{ github.event.inputs.version }}
 
       - name: Zip release
         run: zip -r release.zip ./libraries/**/dist/*.js
@@ -55,7 +72,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: v${{ steps.get_version.outputs.version }}
+          name: v${{ github.event.inputs.version }}
           prerelease: true
 
           files: ./release.zip

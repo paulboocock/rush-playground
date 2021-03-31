@@ -2,27 +2,41 @@ dependencies:
   '@rush-temp/add': file:projects/add.tgz
   '@rush-temp/multiply': file:projects/multiply.tgz
   '@rush-temp/subtract': file:projects/subtract.tgz
+  typescript: 4.2.3
 lockfileVersion: 5.2
 packages:
+  /typescript/4.2.3:
+    dev: false
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
   file:projects/add.tgz:
+    dependencies:
+      typescript: 4.2.3
     dev: false
     name: '@rush-temp/add'
     resolution:
-      integrity: sha512-js60zwLnPpaHSlJSnQS84Po7ZFywmqTJUMfqWxjHLbcykMAtD32V+9J1Gn2f+0I2r9goh/mtxEdIo4sQvaQY2w==
+      integrity: sha512-hMo1iizAptXhWOGOfJEfTN2kkOv21MuLkZiFWyFesjCGcOlX7QQ5a5Nco5k6W0mveYcTSp2/ewsqOtRX0RmsqA==
       tarball: file:projects/add.tgz
     version: 0.0.0
   file:projects/multiply.tgz:
+    dependencies:
+      typescript: 4.2.3
     dev: false
     name: '@rush-temp/multiply'
     resolution:
-      integrity: sha512-xUNvNQDbFeaDFw2HZXQyTCYNA3Vw0K08rNvhkUnyvwEvG1pivv5btII/zXiEiQDWY2GnPv0/DSCltuYz3YvomA==
+      integrity: sha512-UVNhKcNi4Ip+VDkw5KLEnKW5NyTHn+3DiY8hcN+ikDKf5DOvr4l1ER5KWZGmuw3djK453/aDShxbzKEFrsnHjA==
       tarball: file:projects/multiply.tgz
     version: 0.0.0
   file:projects/subtract.tgz:
+    dependencies:
+      typescript: 4.2.3
     dev: false
     name: '@rush-temp/subtract'
     resolution:
-      integrity: sha512-x/tqOjNzxIlxMavDC6M3EvBnNVMWebhyuUltVdwJmF2ql3j240C9eKZOo+kYqdCykjwFh4LohJOSgF9xA1M7aA==
+      integrity: sha512-RWrvX9KFOuGWnJDQt5U5iXpElYSwMHBPEycW3UcGPOHIcD/EDntqr86sh1Aibra0gXJltaOrH4Dsyvh2V/DNAw==
       tarball: file:projects/subtract.tgz
     version: 0.0.0
 registry: ''
@@ -30,3 +44,4 @@ specifiers:
   '@rush-temp/add': file:./projects/add.tgz
   '@rush-temp/multiply': file:./projects/multiply.tgz
   '@rush-temp/subtract': file:./projects/subtract.tgz
+  typescript: ^4.2.3

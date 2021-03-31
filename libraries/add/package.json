@@ -12,5 +12,8 @@
     "test": ""
   },
   "author": "Paul Boocock",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
 }
