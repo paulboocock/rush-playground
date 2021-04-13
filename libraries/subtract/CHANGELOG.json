@@ -2,6 +2,12 @@
   "name": "@paul_boocock/subtract",
   "entries": [
     {
+      "version": "5.2.9",
+      "tag": "@paul_boocock/subtract_v5.2.9",
+      "date": "Tue, 13 Apr 2021 20:02:24 GMT",
+      "comments": {}
+    },
+    {
       "version": "5.2.8",
       "tag": "@paul_boocock/subtract_v5.2.8",
       "date": "Tue, 13 Apr 2021 16:50:23 GMT",
