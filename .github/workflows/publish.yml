@@ -1,4 +1,4 @@
-name: Deploy Tracker
+name: Publish
 
 on:
   workflow_dispatch:
@@ -62,31 +62,19 @@ jobs:
       - name: Zip release
         run: zip -r release.zip ./libraries/**/dist/*.js
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: release
-          path: ./release.zip
-
-  publish:
-    runs-on: ubuntu-20.04
-    needs: deploy
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Bump version and push tag
+      - name: Generate Changelog
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dry_run: true
           tag_prefix: ''
           default_bump: false
           custom_tag: ${{ github.event.inputs.version }}
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: release
+      
+      - name: Tag release
+        run: |
+          git tag -a ${{ steps.tag_version.outputs.new_tag }} -m "Version ${{ steps.tag_version.outputs.new_tag }}"
+          git push --tags
 
       - name: Release
         uses: softprops/action-gh-release@v1
