@@ -2,6 +2,12 @@
   "name": "@paul_boocock/multiply",
   "entries": [
     {
+      "version": "5.2.5",
+      "tag": "@paul_boocock/multiply_v5.2.5",
+      "date": "Wed, 31 Mar 2021 11:16:16 GMT",
+      "comments": {}
+    },
+    {
       "version": "5.2.4",
       "tag": "@paul_boocock/multiply_v5.2.4",
       "date": "Wed, 31 Mar 2021 11:12:16 GMT",
