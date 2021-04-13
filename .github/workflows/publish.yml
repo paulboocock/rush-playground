@@ -40,6 +40,8 @@ jobs:
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
+          name: github-actions[bot]
+          email: 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Version
         run: node common/scripts/install-run-rush.js version --bump --target-branch main
@@ -56,6 +58,11 @@ jobs:
         
       - name: Publish
         run: node common/scripts/install-run-rush.js publish --apply --include-all --publish --target-branch main --set-access-level public
+
+      - name: Pull changes
+        run: |
+          git fetch
+          git pull
 
       - name: Bump version and push tag
         id: tag_version
