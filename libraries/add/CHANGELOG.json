@@ -2,6 +2,12 @@
   "name": "@paul_boocock/add",
   "entries": [
     {
+      "version": "5.2.8",
+      "tag": "@paul_boocock/add_v5.2.8",
+      "date": "Tue, 13 Apr 2021 16:50:23 GMT",
+      "comments": {}
+    },
+    {
       "version": "5.2.7",
       "tag": "@paul_boocock/add_v5.2.7",
       "date": "Tue, 13 Apr 2021 16:30:58 GMT",
